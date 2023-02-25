@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ImenuValues } from './ImenuValues';
+import { menuValues } from './menuValues';
+
 @Injectable({
   providedIn: 'root'
 })

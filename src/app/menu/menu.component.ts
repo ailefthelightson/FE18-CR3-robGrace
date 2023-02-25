@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ImenuValues } from '../ImenuValues';
 import {menuValues} from '../menuValues';
 import { MenuDetailsComponent } from '../menu-details/menu-details.component';
+import { StoreService } from '../store.service';
 
 
 @Component({
@@ -13,6 +14,12 @@ import { MenuDetailsComponent } from '../menu-details/menu-details.component';
 export class MenuComponent {
  newPropNames: Array<ImenuValues> = menuValues;
  
-numberRando = Math.random() < 0.5;
+constructor(private cs: StoreService){
 
+}
+addToCart(whatever:ImenuValues){
+alert("added");
+this.cs.addToCart(whatever);
+console.log(this.cs.addToCart(whatever))
+}
 }
