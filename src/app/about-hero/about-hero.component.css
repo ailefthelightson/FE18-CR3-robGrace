@@ -1,0 +1,8 @@
+#heroPic {
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/06/22/36/eat-2378726_1280.jpg");
+    background-size: cover;
+    height: 700px;
+}
+#font2 {
+    font-weight: bold;
+}
