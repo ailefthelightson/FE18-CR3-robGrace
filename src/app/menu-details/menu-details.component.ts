@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { menuValues } from '../menu/menuValues';
-import { ImenuValues } from '../menu/ImenuValues';
+import { ImenuValues } from '../ImenuValues'; 
+import { menuValues } from '../menuValues';
+import { StoreService } from '../store.service';
 
 @Component({
   selector: 'app-menu-details',
@@ -10,16 +11,22 @@ import { ImenuValues } from '../menu/ImenuValues';
 })
 export class MenuDetailsComponent implements OnInit{
   menuDet: ImenuValues = {} as ImenuValues;
-  id: number = 0;
+  i: number = 0;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute, private cs: StoreService
   ) {}
+
+  addToCart(){
+    alert("product has been added to cart");
+    this.cs.addToCart(this.menuDet);
+    console.log(this.cs.cart)
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.id = +params["id"];
-      this.menuDet = menuValues[this.id]
+      this.i = +params["i"];
+      this.menuDet = menuValues[this.i]
       console.log(this.menuDet)
     
     });

@@ -1,4 +1,9 @@
-<div class="container">
-  <p>{{menuDet.description}}</p>
-  hello\<p>hello</p>
+<div class="container" style="border: 1px solid black; margin-top: 5px; padding-top: 5px; padding-bottom: 5px;" >
+  <h1>Product Details</h1>
+  <h3>{{menuDet.name}}</h3>
+  <img src="{{menuDet.img}}">
+  <p>{{this.menuDet.description}}</p>
+  <p>all our food is made fresh with ingredients we don't know the origin of.</p>
+<button class="btn btn-danger" (click)="addToCart()">order now</button>
+  
 </div>

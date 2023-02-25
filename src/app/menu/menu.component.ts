@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { menuValues } from './menuValues';
-import { ImenuValues } from './ImenuValues';
+import { ImenuValues } from '../ImenuValues';
+import {menuValues} from '../menuValues';
+import { MenuDetailsComponent } from '../menu-details/menu-details.component';
 
 
 @Component({
